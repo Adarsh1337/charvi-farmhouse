@@ -62,7 +62,8 @@
     <!-- Header -->
     <header class="bg-white/80 backdrop-blur-sm shadow-md fixed w-full z-50">
         <!-- Adjusted padding and font size for mobile -->
-        <nav class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+        <!-- ADDED flex-wrap here to fix the mobile nav issue -->
+        <nav class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center flex-wrap">
             <a href="#" class="font-dancing-script text-2xl sm:text-3xl font-bold text-green-700">Charvi Farm House</a>
             <div class="hidden md:flex items-center space-x-6">
                 <a href="#about" class="text-gray-600 hover:text-green-700 transition">About</a>
@@ -81,7 +82,7 @@
             </div>
         </nav>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white/95">
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 w-full">
             <a href="#about" class="block py-3 px-4 text-base hover:bg-green-100 transition-colors duration-300">About</a>
             <a href="#gallery" class="block py-3 px-4 text-base hover:bg-green-100 transition-colors duration-300">Gallery</a>
             <a href="#pricing" class="block py-3 px-4 text-base hover:bg-green-100 transition-colors duration-300">Pricing</a>
@@ -226,6 +227,8 @@
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+            // This ensures the menu takes the full width when it becomes visible
+            mobileMenu.classList.add('w-full');
         });
 
         // Close mobile menu when a link is clicked
