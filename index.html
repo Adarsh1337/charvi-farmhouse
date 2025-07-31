@@ -26,11 +26,11 @@
             font-family: 'Dancing Script', cursive;
         }
         .hero-section {
-            /* Replace with your main hero image */
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero.png');
+            /* IMPORTANT: Replace this with the correct path to your hero image on GitHub Pages */
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://placehold.co/1920x1080/556b2f/ffffff?text=Charvi+Farmhouse+View');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
+            /* background-attachment: fixed can be problematic on some mobile devices, test if you re-enable it */
         }
         .gallery-img {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -61,8 +61,9 @@
 
     <!-- Header -->
     <header class="bg-white/80 backdrop-blur-sm shadow-md fixed w-full z-50">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#" class="font-dancing-script text-3xl font-bold text-green-700">Charvi Farm House</a>
+        <!-- Adjusted padding and font size for mobile -->
+        <nav class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+            <a href="#" class="font-dancing-script text-2xl sm:text-3xl font-bold text-green-700">Charvi Farm House</a>
             <div class="hidden md:flex items-center space-x-6">
                 <a href="#about" class="text-gray-600 hover:text-green-700 transition">About</a>
                 <a href="#gallery" class="text-gray-600 hover:text-green-700 transition">Gallery</a>
@@ -81,10 +82,10 @@
         </nav>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white/95">
-            <a href="#about" class="block py-2 px-4 text-sm hover:bg-green-100">About</a>
-            <a href="#gallery" class="block py-2 px-4 text-sm hover:bg-green-100">Gallery</a>
-            <a href="#pricing" class="block py-2 px-4 text-sm hover:bg-green-100">Pricing</a>
-            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-green-100">Contact</a>
+            <a href="#about" class="block py-3 px-4 text-base hover:bg-green-100 transition-colors duration-300">About</a>
+            <a href="#gallery" class="block py-3 px-4 text-base hover:bg-green-100 transition-colors duration-300">Gallery</a>
+            <a href="#pricing" class="block py-3 px-4 text-base hover:bg-green-100 transition-colors duration-300">Pricing</a>
+            <a href="#contact" class="block py-3 px-4 text-base hover:bg-green-100 transition-colors duration-300">Contact</a>
             <div class="p-4 border-t border-gray-200">
                  <a href="tel:+916300967780" class="btn-animated w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full flex items-center justify-center gap-3 text-lg">
                     <i class="fas fa-phone"></i> Call Now
@@ -94,38 +95,42 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-section h-screen flex items-center justify-center text-white text-center">
-        <div class="bg-black/30 p-8 rounded-xl">
-            <h1 class="font-dancing-script text-6xl md:text-8xl font-bold mb-4">Charvi Farm House</h1>
-            <p class="text-xl md:text-2xl font-light">Your serene escape awaits. Book your stay today!</p>
+    <section class="hero-section h-screen flex items-center justify-center text-white text-center px-4">
+        <div class="bg-black/40 p-6 sm:p-8 rounded-xl">
+            <!-- Adjusted font sizes for better mobile viewing -->
+            <h1 class="font-dancing-script text-5xl sm:text-6xl md:text-8xl font-bold mb-4">Charvi Farm House</h1>
+            <p class="text-lg sm:text-xl md:text-2xl font-light">Your serene escape awaits. Book your stay today!</p>
         </div>
     </section>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-6 py-16">
+    <!-- Adjusted horizontal padding for mobile -->
+    <main class="container mx-auto px-4 sm:px-6 py-16">
 
         <!-- About Section -->
         <section id="about" class="my-16 fade-in">
-            <h2 class="text-4xl font-bold text-center mb-12 text-green-800">Welcome to Your Private Oasis</h2>
-            <div class="flex flex-col md:flex-row items-center gap-12">
+            <!-- Adjusted font sizes for mobile -->
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-green-800">Welcome to Your Private Oasis</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
                 <div class="md:w-1/2">
-                    <!-- Replace with an image of your farmhouse exterior -->
-                    <img src="images/IMG_2648.jpg" alt="Farmhouse view" class="rounded-lg shadow-xl w-full gallery-img">
+                    <!-- FIXED IMAGE PATH: Replace this with your actual image URL -->
+                    <img src="https://placehold.co/600x400/8fbc8f/ffffff?text=Farmhouse+Exterior" alt="Farmhouse view" class="rounded-lg shadow-xl w-full gallery-img">
                 </div>
                 <div class="md:w-1/2">
-                    <p class="text-lg mb-4">
+                    <p class="text-base sm:text-lg mb-4">
                         Nestled in the tranquil Bhanur Village, Charvi Farm House offers the perfect blend of luxury and nature. It's an ideal destination for families, friends, and small groups looking to unwind and create lasting memories.
                     </p>
-                    <p class="text-lg mb-6">
+                    <p class="text-base sm:text-lg mb-6">
                         Enjoy our sparkling clean swimming pool, lush green lawns, and comfortable, well-appointed rooms. Whether you're planning a weekend getaway, a day-long picnic, or a special celebration, our farmhouse provides the perfect backdrop.
                     </p>
-                    <div class="grid grid-cols-2 gap-4 text-lg">
-                        <div class="flex items-center gap-3"><i class="fas fa-users text-green-600"></i><span>Up to 15 Guests</span></div>
-                        <div class="flex items-center gap-3"><i class="fas fa-swimming-pool text-green-600"></i><span>Private Pool</span></div>
-                        <div class="flex items-center gap-3"><i class="fas fa-tree text-green-600"></i><span>Spacious Lawns</span></div>
-                        <div class="flex items-center gap-3"><i class="fas fa-bed text-green-600"></i><span>Cozy Bedrooms</span></div>
-                         <div class="flex items-center gap-3"><i class="fas fa-kitchen-set text-green-600"></i><span>Full Kitchen</span></div>
-                        <div class="flex items-center gap-3"><i class="fas fa-music text-green-600"></i><span>Music System</span></div>
+                    <!-- Made the grid responsive for better stacking on mobile -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-base sm:text-lg">
+                        <div class="flex items-center gap-3"><i class="fas fa-users text-green-600 w-5 text-center"></i><span>Up to 15 Guests</span></div>
+                        <div class="flex items-center gap-3"><i class="fas fa-swimming-pool text-green-600 w-5 text-center"></i><span>Private Pool</span></div>
+                        <div class="flex items-center gap-3"><i class="fas fa-tree text-green-600 w-5 text-center"></i><span>Spacious Lawns</span></div>
+                        <div class="flex items-center gap-3"><i class="fas fa-bed text-green-600 w-5 text-center"></i><span>Cozy Bedrooms</span></div>
+                        <div class="flex items-center gap-3"><i class="fas fa-kitchen-set text-green-600 w-5 text-center"></i><span>Full Kitchen</span></div>
+                        <div class="flex items-center gap-3"><i class="fas fa-music text-green-600 w-5 text-center"></i><span>Music System</span></div>
                     </div>
                 </div>
             </div>
@@ -133,67 +138,69 @@
 
         <!-- Gallery Section -->
         <section id="gallery" class="my-24 fade-in">
-            <h2 class="text-4xl font-bold text-center mb-12 text-green-800">Explore the Farmhouse</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Replace these with your gallery images -->
-                <img src="path/to/your/gallery-image-1.jpg" alt="Pool at night" class="gallery-img rounded-lg cursor-pointer" onclick="openModal('path/to/your/gallery-image-1.jpg')">
-                <img src="path/to/your/gallery-image-2.jpg" alt="Sunset by the pool" class="gallery-img rounded-lg cursor-pointer" onclick="openModal('path/to/your/gallery-image-2.jpg')">
-                <img src="path/to/your/gallery-image-3.jpg" alt="Guests enjoying their time" class="gallery-img rounded-lg cursor-pointer" onclick="openModal('path/to/your/gallery-image-3.jpg')">
-                <img src="path/to/your/gallery-image-4.jpg" alt="Bedroom" class="gallery-img rounded-lg cursor-pointer" onclick="openModal('path/to/your/gallery-image-4.jpg')">
-                <img src="path/to/your/gallery-image-5.jpg" alt="Living room" class="gallery-img rounded-lg cursor-pointer" onclick="openModal('path/to/your/gallery-image-5.jpg')">
-                <img src="path/to/your/gallery-image-6.jpg" alt="Farmhouse at night" class="gallery-img rounded-lg cursor-pointer" onclick="openModal('path/to/your/gallery-image-6.jpg')">
-                <img src="path/to/your/gallery-image-7.jpg" alt="Another view of the farmhouse at night" class="gallery-img rounded-lg cursor-pointer" onclick="openModal('path/to/your/gallery-image-7.jpg')">
-                <img src="path/to/your/gallery-image-8.jpg" alt="Farmhouse exterior" class="gallery-img rounded-lg cursor-pointer" onclick="openModal('path/to/your/gallery-image-8.jpg')">
-                <img src="path/to/your/gallery-image-9.jpg" alt="Aerial view at night" class="gallery-img rounded-lg cursor-pointer" onclick="openModal('path/to/your/gallery-image-9.jpg')">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-green-800">Explore the Farmhouse</h2>
+            <!-- The grid is already responsive, which is great! -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                <!-- FIXED IMAGE PATHS: Replace these with your actual image URLs -->
+                <img src="https://placehold.co/400x300/2e8b57/ffffff?text=Pool+at+Night" alt="Pool at night" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover" onclick="openModal('https://placehold.co/800x600/2e8b57/ffffff?text=Pool+at+Night')">
+                <img src="https://placehold.co/400x300/3cb371/ffffff?text=Lawn+Area" alt="Lawn Area" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover" onclick="openModal('https://placehold.co/800x600/3cb371/ffffff?text=Lawn+Area')">
+                <img src="https://placehold.co/400x300/66cdaa/ffffff?text=Relaxing+Zone" alt="Guests enjoying their time" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover" onclick="openModal('https://placehold.co/800x600/66cdaa/ffffff?text=Relaxing+Zone')">
+                <img src="https://placehold.co/400x300/98fb98/ffffff?text=Bedroom" alt="Bedroom" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover" onclick="openModal('https://placehold.co/800x600/98fb98/ffffff?text=Bedroom')">
+                <img src="https://placehold.co/400x300/8fbc8f/ffffff?text=Living+Area" alt="Living room" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover" onclick="openModal('https://placehold.co/800x600/8fbc8f/ffffff?text=Living+Area')">
+                <img src="https://placehold.co/400x300/20b2aa/ffffff?text=Night+View" alt="Farmhouse at night" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover" onclick="openModal('https://placehold.co/800x600/20b2aa/ffffff?text=Night+View')">
             </div>
         </section>
         
         <!-- Pricing & Booking Section -->
         <section id="pricing" class="my-24 fade-in">
-            <h2 class="text-4xl font-bold text-center mb-12 text-green-800">Pricing & Booking</h2>
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-green-800">Pricing & Booking</h2>
+            <!-- This already stacks on mobile (flex-col), which is perfect! -->
             <div class="flex flex-col md:flex-row gap-8 justify-center">
-                <!-- Pricing Cards -->
                 <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-green-500 w-full md:w-1/3 text-center">
                     <h3 class="text-2xl font-bold mb-4">Weekdays</h3>
-                    <p class="text-5xl font-bold mb-4 text-green-700">₹14,000</p>
+                    <!-- Adjusted font size for mobile -->
+                    <p class="text-4xl sm:text-5xl font-bold mb-4 text-green-700">₹14,000</p>
                     <p class="text-gray-500">(Mon–Fri, 22 Hours)</p>
                 </div>
                 <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-green-700 w-full md:w-1/3 text-center">
                     <h3 class="text-2xl font-bold mb-4">Weekends</h3>
-                    <p class="text-5xl font-bold mb-4 text-green-700">₹16,000</p>
+                    <!-- Adjusted font size for mobile -->
+                    <p class="text-4xl sm:text-5xl font-bold mb-4 text-green-700">₹16,000</p>
                     <p class="text-gray-500">(Sat–Sun, 22 Hours)</p>
                 </div>
             </div>
-            <div class="mt-12 bg-green-50 p-8 rounded-lg shadow-inner">
-                <h3 class="text-2xl font-bold mb-6 text-center text-green-800">Important Information</h3>
-                <ul class="space-y-4 text-lg list-none md:list-disc list-inside md:grid md:grid-cols-2 md:gap-x-8">
-                    <li><i class="fas fa-users text-green-600 mr-2"></i><strong>Capacity:</strong> 15 members included.</li>
-                    <li><i class="fas fa-user-plus text-green-600 mr-2"></i><strong>Extra Guests:</strong> ₹500 per additional person.</li>
-                    <li><i class="fas fa-clock text-green-600 mr-2"></i><strong>Check-in:</strong> 12:00 PM</li>
-                    <li><i class="fas fa-clock text-green-600 mr-2"></i><strong>Check-out:</strong> 10:00 AM (next day)</li>
-                    <li><i class="fas fa-file-invoice-dollar text-green-600 mr-2"></i>Advance payment required to confirm booking.</li>
-                    <li><i class="fas fa-music text-green-600 mr-2"></i>Music allowed till midnight.</li>
-                    <li><i class="fas fa-id-card text-green-600 mr-2"></i>ID proof mandatory at check-in.</li>
-                    <li><i class="fas fa-broom text-green-600 mr-2"></i>Please maintain cleanliness & check out on time.</li>
+            <div class="mt-12 bg-green-50 p-6 sm:p-8 rounded-lg shadow-inner">
+                <h3 class="text-xl sm:text-2xl font-bold mb-6 text-center text-green-800">Important Information</h3>
+                <!-- Removed list-disc on mobile for a cleaner look, kept for larger screens -->
+                <ul class="space-y-4 text-base sm:text-lg list-none md:list-disc list-inside md:grid md:grid-cols-2 md:gap-x-8">
+                    <li><i class="fas fa-users text-green-600 mr-2 md:hidden"></i><strong>Capacity:</strong> 15 members included.</li>
+                    <li><i class="fas fa-user-plus text-green-600 mr-2 md:hidden"></i><strong>Extra Guests:</strong> ₹500 per additional person.</li>
+                    <li><i class="fas fa-clock text-green-600 mr-2 md:hidden"></i><strong>Check-in:</strong> 12:00 PM</li>
+                    <li><i class="fas fa-clock text-green-600 mr-2 md:hidden"></i><strong>Check-out:</strong> 10:00 AM (next day)</li>
+                    <li><i class="fas fa-file-invoice-dollar text-green-600 mr-2 md:hidden"></i>Advance payment required to confirm booking.</li>
+                    <li><i class="fas fa-music text-green-600 mr-2 md:hidden"></i>Music allowed till midnight.</li>
+                    <li><i class="fas fa-id-card text-green-600 mr-2 md:hidden"></i>ID proof mandatory at check-in.</li>
+                    <li><i class="fas fa-broom text-green-600 mr-2 md:hidden"></i>Please maintain cleanliness & check out on time.</li>
                 </ul>
             </div>
         </section>
 
         <!-- Contact Section -->
         <section id="contact" class="my-24 text-center fade-in">
-            <h2 class="text-4xl font-bold mb-4 text-green-800">Ready to Book?</h2>
-            <p class="text-xl mb-10 max-w-2xl mx-auto">Contact us now to reserve your date and experience the tranquility of Charvi Farm House.</p>
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-green-800">Ready to Book?</h2>
+            <p class="text-lg sm:text-xl mb-10 max-w-2xl mx-auto">Contact us now to reserve your date and experience the tranquility of Charvi Farm House.</p>
+            <!-- flex-wrap ensures buttons stack on mobile, which is great -->
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="https://maps.app.goo.gl/DhFEEfKiLsqnojtBA" target="_blank" class="btn-animated bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full flex items-center gap-3 text-lg">
+                <a href="https://maps.app.goo.gl/DhFEEfKiLsqnojtBA" target="_blank" class="btn-animated bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-5 rounded-full flex items-center gap-3 text-base sm:text-lg">
                     <i class="fas fa-map-marker-alt"></i> Google Maps
                 </a>
-                <a href="https://www.instagram.com/charvifarmhouse/" target="_blank" class="btn-animated bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-3 px-6 rounded-full flex items-center gap-3 text-lg">
+                <a href="https://www.instagram.com/charvifarmhouse/" target="_blank" class="btn-animated bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-3 px-5 rounded-full flex items-center gap-3 text-base sm:text-lg">
                     <i class="fab fa-instagram"></i> Instagram
                 </a>
-                <a href="https://wa.me/916300967780" target="_blank" class="btn-animated bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full flex items-center gap-3 text-lg">
+                <a href="https://wa.me/916300967780" target="_blank" aclass="btn-animated bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-5 rounded-full flex items-center gap-3 text-base sm:text-lg">
                     <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
-                <a href="tel:+916300967780" class="btn-animated bg-gray-700 hover:bg-gray-800 text-white font-bold py-3 px-6 rounded-full flex items-center gap-3 text-lg">
+                <a href="tel:+916300967780" class="btn-animated bg-gray-700 hover:bg-gray-800 text-white font-bold py-3 px-5 rounded-full flex items-center gap-3 text-base sm:text-lg">
                     <i class="fas fa-phone"></i> Call Now
                 </a>
             </div>
@@ -208,9 +215,9 @@
     </footer>
 
     <!-- Image Modal -->
-    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50 hidden" onclick="closeModal()">
-        <img id="modalImage" src="" alt="Enlarged gallery image" class="max-w-[90%] max-h-[90%] object-contain rounded-lg">
-        <button class="absolute top-4 right-4 text-white text-3xl font-bold">&times;</button>
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-90 flex justify-center items-center z-[100] hidden p-4" onclick="closeModal()">
+        <img id="modalImage" src="" alt="Enlarged gallery image" class="max-w-full max-h-full object-contain rounded-lg">
+        <button class="absolute top-4 right-4 text-white text-4xl font-bold">&times;</button>
     </div>
 
     <script>
