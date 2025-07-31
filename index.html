@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charvi Farm House - Your Perfect Getaway</title>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS - Switched to a static CSS file for better compatibility -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,6 +53,16 @@
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
+        }
+        /* Adding support for backdrop-blur since it might not be in the default build */
+        .backdrop-blur-sm {
+            --tw-backdrop-blur: blur(4px);
+            backdrop-filter: var(--tw-backdrop-filter, var(--tw-backdrop-blur, 0)) var(--tw-backdrop-saturate, ) var(--tw-backdrop-brightness, ) var(--tw-backdrop-contrast, ) var(--tw-backdrop-grayscale, ) var(--tw-backdrop-hue-rotate, ) var(--tw-backdrop-invert, ) var(--tw-backdrop-opacity, ) var(--tw-backdrop-sepia, );
+        }
+        /* Adding support for background-opacity */
+        .bg-white\/80 {
+            --tw-bg-opacity: 0.8;
+            background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
         }
     </style>
 </head>
