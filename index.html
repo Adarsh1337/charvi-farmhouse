@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charvi Farm House - Your Perfect Getaway</title>
     
-    <!-- Tailwind CSS - Switched to a static CSS file for better compatibility -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,10 +26,11 @@
             font-family: 'Dancing Script', cursive;
         }
         .hero-section {
-            /* Final Hero Image Path */
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero.png');
+            /* Replace with your main hero image */
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('path/to/your/hero-image.jpg');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
         .gallery-img {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -54,28 +55,17 @@
             opacity: 1;
             transform: translateY(0);
         }
-        /* Adding support for backdrop-blur since it might not be in the default build */
-        .backdrop-blur-sm {
-            --tw-backdrop-blur: blur(4px);
-            backdrop-filter: var(--tw-backdrop-filter, var(--tw-backdrop-blur, 0)) var(--tw-backdrop-saturate, ) var(--tw-backdrop-brightness, ) var(--tw-backdrop-contrast, ) var(--tw-backdrop-grayscale, ) var(--tw-backdrop-hue-rotate, ) var(--tw-backdrop-invert, ) var(--tw-backdrop-opacity, ) var(--tw-backdrop-sepia, );
-        }
-        /* Adding support for background-opacity */
-        .bg-white\/80 {
-            --tw-bg-opacity: 0.8;
-            background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
     <!-- Header -->
     <header class="bg-white/80 backdrop-blur-sm shadow-md fixed w-full z-50">
-        <nav class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center flex-wrap">
-            <a href="#" class="font-dancing-script text-2xl sm:text-3xl font-bold text-green-700">Charvi Farm House</a>
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="font-dancing-script text-3xl font-bold text-green-700">Charvi Farm House</a>
             <div class="hidden md:flex items-center space-x-6">
                 <a href="#about" class="text-gray-600 hover:text-green-700 transition">About</a>
                 <a href="#gallery" class="text-gray-600 hover:text-green-700 transition">Gallery</a>
-                <a href="#pricing" class="text-gray-600 hover:text-green-700 transition">Pricing</a>
                 <a href="#contact" class="text-gray-600 hover:text-green-700 transition">Contact</a>
                 <span class="text-gray-700 font-semibold"><i class="fas fa-phone-alt mr-2"></i>6300967780</span>
                 <a href="tel:+916300967780" class="btn-animated bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full flex items-center gap-2 text-sm">
@@ -89,11 +79,10 @@
             </div>
         </nav>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white/95 w-full">
-            <a href="#about" class="block py-3 px-4 text-base hover:bg-green-100 transition-colors duration-300">About</a>
-            <a href="#gallery" class="block py-3 px-4 text-base hover:bg-green-100 transition-colors duration-300">Gallery</a>
-            <a href="#pricing" class="block py-3 px-4 text-base hover:bg-green-100 transition-colors duration-300">Pricing</a>
-            <a href="#contact" class="block py-3 px-4 text-base hover:bg-green-100 transition-colors duration-300">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95">
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-green-100">About</a>
+            <a href="#gallery" class="block py-2 px-4 text-sm hover:bg-green-100">Gallery</a>
+            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-green-100">Contact</a>
             <div class="p-4 border-t border-gray-200">
                  <a href="tel:+916300967780" class="btn-animated w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full flex items-center justify-center gap-3 text-lg">
                     <i class="fas fa-phone"></i> Call Now
@@ -103,38 +92,37 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-section h-screen flex items-center justify-center text-white text-center px-4">
-        <div class="bg-black/40 p-6 sm:p-8 rounded-xl">
-            <h1 class="font-dancing-script text-5xl sm:text-6xl md:text-8xl font-bold mb-4">Charvi Farm House</h1>
-            <p class="text-lg sm:text-xl md:text-2xl font-light">Your serene escape awaits. Book your stay today!</p>
+    <section class="hero-section h-screen flex items-center justify-center text-white text-center">
+        <div class="bg-black/30 p-8 rounded-xl">
+            <h1 class="font-dancing-script text-6xl md:text-8xl font-bold mb-4">Charvi Farm House</h1>
+            <p class="text-xl md:text-2xl font-light">Your serene escape awaits. Book your stay today!</p>
         </div>
     </section>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-4 sm:px-6 py-16">
+    <main class="container mx-auto px-6 py-16">
 
         <!-- About Section -->
         <section id="about" class="my-16 fade-in">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-green-800">Welcome to Your Private Oasis</h2>
-            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <h2 class="text-4xl font-bold text-center mb-12 text-green-800">Welcome to Your Private Oasis</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
-                    <!-- Final About Image Path -->
-                    <img src="images/IMG_2648.jpg" alt="Farmhouse view" class="rounded-lg shadow-xl w-full gallery-img">
+                    <!-- Replace with an image of your farmhouse exterior -->
+                    <img src="path/to/your/farmhouse-view.jpg" alt="Farmhouse view" class="rounded-lg shadow-xl w-full gallery-img">
                 </div>
                 <div class="md:w-1/2">
-                    <p class="text-base sm:text-lg mb-4">
+                    <p class="text-lg mb-4">
                         Nestled in the tranquil Bhanur Village, Charvi Farm House offers the perfect blend of luxury and nature. It's an ideal destination for families, friends, and small groups looking to unwind and create lasting memories.
                     </p>
-                    <p class="text-base sm:text-lg mb-6">
+                    <p class="text-lg mb-6">
                         Enjoy our sparkling clean swimming pool, lush green lawns, and comfortable, well-appointed rooms. Whether you're planning a weekend getaway, a day-long picnic, or a special celebration, our farmhouse provides the perfect backdrop.
                     </p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-base sm:text-lg">
-                        <div class="flex items-center gap-3"><i class="fas fa-users text-green-600 w-5 text-center"></i><span>Up to 15 Guests</span></div>
-                        <div class="flex items-center gap-3"><i class="fas fa-swimming-pool text-green-600 w-5 text-center"></i><span>Private Pool</span></div>
-                        <div class="flex items-center gap-3"><i class="fas fa-tree text-green-600 w-5 text-center"></i><span>Spacious Lawns</span></div>
-                        <div class="flex items-center gap-3"><i class="fas fa-bed text-green-600 w-5 text-center"></i><span>Cozy Bedrooms</span></div>
-                        <div class="flex items-center gap-3"><i class="fas fa-kitchen-set text-green-600 w-5 text-center"></i><span>Full Kitchen</span></div>
-                        <div class="flex items-center gap-3"><i class="fas fa-music text-green-600 w-5 text-center"></i><span>Music System</span></div>
+                    <div class="grid grid-cols-2 gap-4 text-lg">
+                        <div class="flex items-center gap-3"><i class="fas fa-swimming-pool text-green-600"></i><span>Private Pool</span></div>
+                        <div class="flex items-center gap-3"><i class="fas fa-tree text-green-600"></i><span>Spacious Lawns</span></div>
+                        <div class="flex items-center gap-3"><i class="fas fa-bed text-green-600"></i><span>Cozy Bedrooms</span></div>
+                         <div class="flex items-center gap-3"><i class="fas fa-kitchen-set text-green-600"></i><span>Full Kitchen</span></div>
+                        <div class="flex items-center gap-3"><i class="fas fa-music text-green-600"></i><span>Music System</span></div>
                     </div>
                 </div>
             </div>
@@ -142,63 +130,33 @@
 
         <!-- Gallery Section -->
         <section id="gallery" class="my-24 fade-in">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-green-800">Explore the Farmhouse</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-                <!-- Final Gallery Image Paths -->
-                <img src="images/gallery-pool-night.jpg" alt="Pool at night" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover" onclick="openModal('images/gallery-pool-night.jpg')">
-                <img src="images/gallery-lawn.jpg" alt="Lawn Area" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover" onclick="openModal('images/gallery-lawn.jpg')">
-                <img src="images/gallery-relaxing-zone.jpg" alt="Guests enjoying their time" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover" onclick="openModal('images/gallery-relaxing-zone.jpg')">
-                <img src="images/gallery-bedroom.jpg" alt="Bedroom" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover" onclick="openModal('images/gallery-bedroom.jpg')">
-                <img src="images/gallery-living-area.jpg" alt="Living room" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover" onclick="openModal('images/gallery-living-area.jpg')">
-                <img src="images/gallery-night-view.jpg" alt="Farmhouse at night" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover" onclick="openModal('images/gallery-night-view.jpg')">
+            <h2 class="text-4xl font-bold text-center mb-12 text-green-800">Gallery</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <!-- Replace these with your 6 gallery images -->
+                <img src="path/to/your/gallery-image-1.jpg" alt="Gallery image 1" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover aspect-square" onclick="openModal('path/to/your/gallery-image-1.jpg')">
+                <img src="path/to/your/gallery-image-2.jpg" alt="Gallery image 2" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover aspect-square" onclick="openModal('path/to/your/gallery-image-2.jpg')">
+                <img src="path/to/your/gallery-image-3.jpg" alt="Gallery image 3" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover aspect-square" onclick="openModal('path/to/your/gallery-image-3.jpg')">
+                <img src="path/to/your/gallery-image-4.jpg" alt="Gallery image 4" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover aspect-square" onclick="openModal('path/to/your/gallery-image-4.jpg')">
+                <img src="path/to/your/gallery-image-5.jpg" alt="Gallery image 5" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover aspect-square" onclick="openModal('path/to/your/gallery-image-5.jpg')">
+                <img src="path/to/your/gallery-image-6.jpg" alt="Gallery image 6" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover aspect-square" onclick="openModal('path/to/your/gallery-image-6.jpg')">
             </div>
         </section>
         
-        <!-- Pricing & Booking Section -->
-        <section id="pricing" class="my-24 fade-in">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-green-800">Pricing & Booking</h2>
-            <div class="flex flex-col md:flex-row gap-8 justify-center">
-                <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-green-500 w-full md:w-1/3 text-center">
-                    <h3 class="text-2xl font-bold mb-4">Weekdays</h3>
-                    <p class="text-4xl sm:text-5xl font-bold mb-4 text-green-700">₹14,000</p>
-                    <p class="text-gray-500">(Mon–Fri, 22 Hours)</p>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-green-700 w-full md:w-1/3 text-center">
-                    <h3 class="text-2xl font-bold mb-4">Weekends</h3>
-                    <p class="text-4xl sm:text-5xl font-bold mb-4 text-green-700">₹16,000</p>
-                    <p class="text-gray-500">(Sat–Sun, 22 Hours)</p>
-                </div>
-            </div>
-            <div class="mt-12 bg-green-50 p-6 sm:p-8 rounded-lg shadow-inner">
-                <h3 class="text-xl sm:text-2xl font-bold mb-6 text-center text-green-800">Important Information</h3>
-                <ul class="space-y-4 text-base sm:text-lg list-none md:list-disc list-inside md:grid md:grid-cols-2 md:gap-x-8">
-                    <li><i class="fas fa-users text-green-600 mr-2 md:hidden"></i><strong>Capacity:</strong> 15 members included.</li>
-                    <li><i class="fas fa-user-plus text-green-600 mr-2 md:hidden"></i><strong>Extra Guests:</strong> ₹500 per additional person.</li>
-                    <li><i class="fas fa-clock text-green-600 mr-2 md:hidden"></i><strong>Check-in:</strong> 12:00 PM</li>
-                    <li><i class="fas fa-clock text-green-600 mr-2 md:hidden"></i><strong>Check-out:</strong> 10:00 AM (next day)</li>
-                    <li><i class="fas fa-file-invoice-dollar text-green-600 mr-2 md:hidden"></i>Advance payment required to confirm booking.</li>
-                    <li><i class="fas fa-music text-green-600 mr-2 md:hidden"></i>Music allowed till midnight.</li>
-                    <li><i class="fas fa-id-card text-green-600 mr-2 md:hidden"></i>ID proof mandatory at check-in.</li>
-                    <li><i class="fas fa-broom text-green-600 mr-2 md:hidden"></i>Please maintain cleanliness & check out on time.</li>
-                </ul>
-            </div>
-        </section>
-
         <!-- Contact Section -->
         <section id="contact" class="my-24 text-center fade-in">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-green-800">Ready to Book?</h2>
-            <p class="text-lg sm:text-xl mb-10 max-w-2xl mx-auto">Contact us now to reserve your date and experience the tranquility of Charvi Farm House.</p>
+            <h2 class="text-4xl font-bold mb-4 text-green-800">Ready to Book?</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto">Contact us now to reserve your date and experience the tranquility of Charvi Farm House.</p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="https://maps.app.goo.gl/DhFEEfKiLsqnojtBA" target="_blank" class="btn-animated bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-5 rounded-full flex items-center gap-3 text-base sm:text-lg">
+                <a href="https://maps.app.goo.gl/DhFEEfKiLsqnojtBA" target="_blank" class="btn-animated bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full flex items-center gap-3 text-lg">
                     <i class="fas fa-map-marker-alt"></i> Google Maps
                 </a>
-                <a href="https://www.instagram.com/charvifarmhouse/" target="_blank" class="btn-animated bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-3 px-5 rounded-full flex items-center gap-3 text-base sm:text-lg">
+                <a href="https://www.instagram.com/charvifarmhouse/" target="_blank" class="btn-animated bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-3 px-6 rounded-full flex items-center gap-3 text-lg">
                     <i class="fab fa-instagram"></i> Instagram
                 </a>
-                <a href="https://wa.me/916300967780" target="_blank" aclass="btn-animated bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-5 rounded-full flex items-center gap-3 text-base sm:text-lg">
+                <a href="https://wa.me/916300967780" target="_blank" class="btn-animated bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full flex items-center gap-3 text-lg">
                     <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
-                <a href="tel:+916300967780" class="btn-animated bg-gray-700 hover:bg-gray-800 text-white font-bold py-3 px-5 rounded-full flex items-center gap-3 text-base sm:text-lg">
+                <a href="tel:+916300967780" class="btn-animated bg-gray-700 hover:bg-gray-800 text-white font-bold py-3 px-6 rounded-full flex items-center gap-3 text-lg">
                     <i class="fas fa-phone"></i> Call Now
                 </a>
             </div>
@@ -213,9 +171,9 @@
     </footer>
 
     <!-- Image Modal -->
-    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-90 flex justify-center items-center z-[100] hidden p-4" onclick="closeModal()">
-        <img id="modalImage" src="" alt="Enlarged gallery image" class="max-w-full max-h-full object-contain rounded-lg">
-        <button class="absolute top-4 right-4 text-white text-4xl font-bold">&times;</button>
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50 hidden" onclick="closeModal()">
+        <img id="modalImage" src="" alt="Enlarged gallery image" class="max-w-[90%] max-h-[90%] object-contain rounded-lg">
+        <button class="absolute top-4 right-4 text-white text-3xl font-bold">&times;</button>
     </div>
 
     <script>
@@ -224,7 +182,6 @@
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
-            mobileMenu.classList.add('w-full');
         });
 
         // Close mobile menu when a link is clicked
@@ -241,7 +198,7 @@
         function openModal(src) {
             modalImage.src = src;
             imageModal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; 
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
         }
 
         function closeModal() {
