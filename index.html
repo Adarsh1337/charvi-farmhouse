@@ -21,13 +21,13 @@
         body {
             font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
+            padding-top: 68px; /* Adjust for fixed header */
         }
         .font-dancing-script {
             font-family: 'Dancing Script', cursive;
         }
         .hero-section {
-            /* Replace with your main hero image */
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero.png');
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('http://googleusercontent.com/file_content/0');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -60,29 +60,34 @@
 <body class="bg-gray-50 text-gray-800">
 
     <!-- Header -->
-    <header class="bg-white/80 backdrop-blur-sm shadow-md fixed w-full z-50">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#" class="font-dancing-script text-3xl font-bold text-green-700">Charvi Farm House</a>
-            <div class="hidden md:flex items-center space-x-6">
+    <header class="bg-white/80 backdrop-blur-sm shadow-md fixed w-full z-50 top-0 left-0">
+        <nav class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+            <a href="#" class="font-dancing-script text-2xl sm:text-3xl font-bold text-green-700 flex-shrink-0">Charvi Farm House</a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-4">
                 <a href="#about" class="text-gray-600 hover:text-green-700 transition">About</a>
                 <a href="#gallery" class="text-gray-600 hover:text-green-700 transition">Gallery</a>
                 <a href="#contact" class="text-gray-600 hover:text-green-700 transition">Contact</a>
-                <span class="text-gray-700 font-semibold"><i class="fas fa-phone-alt mr-2"></i>6300967780</span>
-                <a href="tel:+916300967780" class="btn-animated bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full flex items-center gap-2 text-sm">
+                <span class="text-gray-700 font-semibold text-sm whitespace-nowrap"><i class="fas fa-phone-alt mr-1"></i>6300967780</span>
+                <a href="tel:+916300967780" class="btn-animated bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full flex items-center gap-2 text-sm whitespace-nowrap">
                     Call Now
                 </a>
             </div>
+
+            <!-- Mobile Menu Button -->
             <div class="md:hidden">
                 <button id="mobile-menu-button" class="text-gray-600 hover:text-green-700 focus:outline-none">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
         </nav>
+        
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white/95">
-            <a href="#about" class="block py-2 px-4 text-sm hover:bg-green-100">About</a>
-            <a href="#gallery" class="block py-2 px-4 text-sm hover:bg-green-100">Gallery</a>
-            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-green-100">Contact</a>
+            <a href="#about" class="block py-3 px-4 text-base hover:bg-green-100">About</a>
+            <a href="#gallery" class="block py-3 px-4 text-base hover:bg-green-100">Gallery</a>
+            <a href="#contact" class="block py-3 px-4 text-base hover:bg-green-100">Contact</a>
             <div class="p-4 border-t border-gray-200">
                  <a href="tel:+916300967780" class="btn-animated w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full flex items-center justify-center gap-3 text-lg">
                     <i class="fas fa-phone"></i> Call Now
@@ -92,32 +97,31 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-section h-screen flex items-center justify-center text-white text-center">
+    <section class="hero-section h-screen flex items-center justify-center text-white text-center px-4 -mt-[68px]">
         <div class="bg-black/30 p-8 rounded-xl">
-            <h1 class="font-dancing-script text-6xl md:text-8xl font-bold mb-4">Charvi Farm House</h1>
-            <p class="text-xl md:text-2xl font-light">Your serene escape awaits. Book your stay today!</p>
+            <h1 class="font-dancing-script text-5xl sm:text-6xl md:text-8xl font-bold mb-4">Charvi Farm House</h1>
+            <p class="text-lg sm:text-xl md:text-2xl font-light">Your serene escape awaits. Book your stay today!</p>
         </div>
     </section>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-6 py-16">
+    <main class="container mx-auto px-4 sm:px-6 py-16">
 
         <!-- About Section -->
         <section id="about" class="my-16 fade-in">
-            <h2 class="text-4xl font-bold text-center mb-12 text-green-800">Welcome to Your Private Oasis</h2>
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-green-800">Welcome to Your Private Oasis</h2>
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
-                    <!-- Replace with an image of your farmhouse exterior -->
-                    <img src="images/IMG_2648.jpg" alt="Farmhouse view" class="rounded-lg shadow-xl w-full gallery-img">
+                    <img src="http://googleusercontent.com/file_content/3" alt="Farmhouse view" class="rounded-lg shadow-xl w-full gallery-img">
                 </div>
                 <div class="md:w-1/2">
-                    <p class="text-lg mb-4">
+                    <p class="text-base sm:text-lg mb-4">
                         Nestled in the tranquil Bhanur Village, Charvi Farm House offers the perfect blend of luxury and nature. It's an ideal destination for families, friends, and small groups looking to unwind and create lasting memories.
                     </p>
-                    <p class="text-lg mb-6">
+                    <p class="text-base sm:text-lg mb-6">
                         Enjoy our sparkling clean swimming pool, lush green lawns, and comfortable, well-appointed rooms. Whether you're planning a weekend getaway, a day-long picnic, or a special celebration, our farmhouse provides the perfect backdrop.
                     </p>
-                    <div class="grid grid-cols-2 gap-4 text-lg">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-base sm:text-lg">
                         <div class="flex items-center gap-3"><i class="fas fa-swimming-pool text-green-600"></i><span>Private Pool</span></div>
                         <div class="flex items-center gap-3"><i class="fas fa-tree text-green-600"></i><span>Spacious Lawns</span></div>
                         <div class="flex items-center gap-3"><i class="fas fa-bed text-green-600"></i><span>Cozy Bedrooms</span></div>
@@ -130,33 +134,32 @@
 
         <!-- Gallery Section -->
         <section id="gallery" class="my-24 fade-in">
-            <h2 class="text-4xl font-bold text-center mb-12 text-green-800">Gallery</h2>
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-green-800">Gallery</h2>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <!-- Replace these with your 6 gallery images -->
-                <img src="path/to/your/gallery-image-1.jpg" alt="Gallery image 1" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover aspect-square" onclick="openModal('path/to/your/gallery-image-1.jpg')">
-                <img src="path/to/your/gallery-image-2.jpg" alt="Gallery image 2" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover aspect-square" onclick="openModal('path/to/your/gallery-image-2.jpg')">
-                <img src="path/to/your/gallery-image-3.jpg" alt="Gallery image 3" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover aspect-square" onclick="openModal('path/to/your/gallery-image-3.jpg')">
-                <img src="path/to/your/gallery-image-4.jpg" alt="Gallery image 4" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover aspect-square" onclick="openModal('path/to/your/gallery-image-4.jpg')">
-                <img src="path/to/your/gallery-image-5.jpg" alt="Gallery image 5" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover aspect-square" onclick="openModal('path/to/your/gallery-image-5.jpg')">
-                <img src="path/to/your/gallery-image-6.jpg" alt="Gallery image 6" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover aspect-square" onclick="openModal('path/to/your/gallery-image-6.jpg')">
+                <img src="http://googleusercontent.com/file_content/1" alt="Gallery image 1" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover aspect-square" onclick="openModal('http://googleusercontent.com/file_content/1')">
+                <img src="http://googleusercontent.com/file_content/2" alt="Gallery image 2" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover aspect-square" onclick="openModal('http://googleusercontent.com/file_content/2')">
+                <img src="http://googleusercontent.com/file_content/4" alt="Gallery image 3" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover aspect-square" onclick="openModal('http://googleusercontent.com/file_content/4')">
+                <img src="http://googleusercontent.com/file_content/6" alt="Gallery image 4" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover aspect-square" onclick="openModal('http://googleusercontent.com/file_content/6')">
+                <img src="http://googleusercontent.com/file_content/5" alt="Gallery image 5" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover aspect-square" onclick="openModal('http://googleusercontent.com/file_content/5')">
+                <img src="http://googleusercontent.com/file_content/7" alt="Gallery image 6" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover aspect-square" onclick="openModal('http://googleusercontent.com/file_content/7')">
             </div>
         </section>
         
         <!-- Contact Section -->
         <section id="contact" class="my-24 text-center fade-in">
-            <h2 class="text-4xl font-bold mb-4 text-green-800">Ready to Book?</h2>
-            <p class="text-xl mb-10 max-w-2xl mx-auto">Contact us now to reserve your date and experience the tranquility of Charvi Farm House.</p>
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-green-800">Ready to Book?</h2>
+            <p class="text-lg sm:text-xl mb-10 max-w-2xl mx-auto">Contact us now to reserve your date and experience the tranquility of Charvi Farm House.</p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="https://maps.app.goo.gl/DhFEEfKiLsqnojtBA" target="_blank" class="btn-animated bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full flex items-center gap-3 text-lg">
+                <a href="https://maps.app.goo.gl/DhFEEfKiLsqnojtBA" target="_blank" class="btn-animated bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full flex items-center gap-3 text-base sm:text-lg">
                     <i class="fas fa-map-marker-alt"></i> Google Maps
                 </a>
-                <a href="https://www.instagram.com/charvifarmhouse/" target="_blank" class="btn-animated bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-3 px-6 rounded-full flex items-center gap-3 text-lg">
+                <a href="https://www.instagram.com/charvifarmhouse/" target="_blank" class="btn-animated bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-3 px-6 rounded-full flex items-center gap-3 text-base sm:text-lg">
                     <i class="fab fa-instagram"></i> Instagram
                 </a>
-                <a href="https://wa.me/916300967780" target="_blank" class="btn-animated bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full flex items-center gap-3 text-lg">
+                <a href="https://wa.me/916300967780" target="_blank" class="btn-animated bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full flex items-center gap-3 text-base sm:text-lg">
                     <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
-                <a href="tel:+916300967780" class="btn-animated bg-gray-700 hover:bg-gray-800 text-white font-bold py-3 px-6 rounded-full flex items-center gap-3 text-lg">
+                <a href="tel:+916300967780" class="btn-animated bg-gray-700 hover:bg-gray-800 text-white font-bold py-3 px-6 rounded-full flex items-center gap-3 text-base sm:text-lg">
                     <i class="fas fa-phone"></i> Call Now
                 </a>
             </div>
@@ -171,9 +174,9 @@
     </footer>
 
     <!-- Image Modal -->
-    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50 hidden" onclick="closeModal()">
-        <img id="modalImage" src="" alt="Enlarged gallery image" class="max-w-[90%] max-h-[90%] object-contain rounded-lg">
-        <button class="absolute top-4 right-4 text-white text-3xl font-bold">&times;</button>
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-[100] hidden p-4" onclick="closeModal()">
+        <img id="modalImage" src="" alt="Enlarged gallery image" class="max-w-full max-h-full object-contain rounded-lg">
+        <button class="absolute top-4 right-4 text-white text-4xl font-bold">&times;</button>
     </div>
 
     <script>
@@ -237,5 +240,3 @@
 
 </body>
 </html>
-
-
