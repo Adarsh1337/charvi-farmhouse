@@ -1,226 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-  <meta name="theme-color" content="#16a34a" />
-  <title>Charvi Farmhouse | Luxury Farmhouse with Private Pool near Hyderabad (Bhanur)</title>
-  <meta name="description" content="Book Charvi Farmhouse in Bhanur, Hyderabad — a luxury farmhouse with private pool, lush lawns, premium rooms, event space, and pet-friendly amenities. Perfect for parties, weddings, corporate retreats, and weekend getaways." />
-  <meta name="keywords" content="charvi farmhouse, luxury farmhouse hyderabad, farmhouse near me, farmhouse with pool, farmhouse bhanur, farmhouse for party hyderabad, wedding farmhouse hyderabad, corporate retreat farmhouse, family farmhouse stay, weekend getaway farmhouse" />
-  <link rel="canonical" href="https://adarsh1337.github.io/charvi-farmhouse/" />
-
-  <!-- Open Graph / Social -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Charvi Farmhouse | Luxury Farmhouse with Private Pool near Hyderabad" />
-  <meta property="og:description" content="Premium farmhouse stay with private pool, lawns, events & stay near Hyderabad (Bhanur)." />
-  <meta property="og:image" content="https://adarsh1337.github.io/charvi-farmhouse/images/hero.jpg" />
-  <meta property="og:url" content="https://adarsh1337.github.io/charvi-farmhouse/" />
-  <meta property="og:locale" content="en_IN" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Charvi Farmhouse | Luxury Farmhouse near Hyderabad" />
-  <meta name="twitter:description" content="Book your private farmhouse with pool, events & weekend stays in Bhanur." />
-  <meta name="twitter:image" content="https://adarsh1337.github.io/charvi-farmhouse/images/hero.jpg" />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
-  <!-- Schema.org JSON-LD: LodgingBusiness -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LodgingBusiness",
-    "name": "Charvi Farmhouse",
-    "description": "Luxury farmhouse with private pool, lawns, events and premium stays in Bhanur, near Hyderabad.",
-    "image": [
-      "https://adarsh1337.github.io/charvi-farmhouse/images/hero.jpg",
-      "https://adarsh1337.github.io/charvi-farmhouse/images/pool.jpg",
-      "https://adarsh1337.github.io/charvi-farmhouse/images/lawn.jpg"
-    ],
-    "url": "https://adarsh1337.github.io/charvi-farmhouse/",
-    "telephone": "+91-0000000000",
-    "priceRange": "₹₹₹",
-    "petsAllowed": true,
-    "amenityFeature": [
-      {"@type": "LocationFeatureSpecification", "name": "Private Pool", "value": true},
-      {"@type": "LocationFeatureSpecification", "name": "Event Lawn", "value": true},
-      {"@type": "LocationFeatureSpecification", "name": "Parking", "value": true}
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Bhanur",
-      "addressLocality": "Hyderabad",
-      "addressRegion": "Telangana",
-      "postalCode": "502300",
-      "addressCountry": "IN"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "17.546",
-      "longitude": "78.136"
-    },
-    "sameAs": [
-      "https://www.instagram.com/charvi_farmhouse",
-      "https://wa.me/910000000000"
-    ]
-  }
-  </script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charvi Farmhouse - Luxury Farm Stay Experience</title>
   <style>
-    :root{--primary:#16a34a;--primary-dark:#15803d;--dark:#0f172a;--muted:#64748b;--light:#f8fafc;--white:#fff}
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;color:var(--dark);background:var(--light);line-height:1.6}
-    img{max-width:100%;display:block;height:auto}
-    .container{max-width:1160px;margin:0 auto;padding:0 20px}
-    header{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);box-shadow:0 8px 30px rgba(2,6,23,.06)}
-    nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{font-family:"Playfair Display",serif;font-size:26px;font-weight:700;color:var(--dark)}
-    .cta{display:inline-flex;align-items:center;gap:10px;background:var(--primary);color:#fff;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:600}
-    .hero{padding:56px 0 24px;display:grid;grid-template-columns:1.05fr .95fr;gap:28px}
-    .hero h1{font-family:"Playfair Display",serif;font-size:40px;line-height:1.15;margin-bottom:12px}
-    .badges{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 18px}
-    .badge{background:#e8f7ee;color:#065f46;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:600}
-    .section{padding:44px 0}
-    h2{font-size:28px;margin-bottom:14px}
-    h3{font-size:20px;margin:10px 0}
-    ul{padding-left:18px}
-    .grid{display:grid;gap:18px}
-    .grid-3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-    .card{background:#fff;border-radius:14px;box-shadow:0 10px 30px rgba(2,6,23,.06);padding:16px}
-    footer{padding:28px 0 50px;color:#334155}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    header {
+      background: linear-gradient(135deg, #2d5016 0%, #4a7c2c 100%);
+      color: white;
+      padding: 20px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+    }
+    
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+    
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: #b8d99f;
+    }
+    
+    .hero {
+      background: url('https://images.unsplash.com/photo-1464093515883-ec948246accb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+      margin-top: 70px;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .hero h1 {
+      font-size: 56px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .hero p {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      padding: 15px 40px;
+      background: #4a7c2c;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 18px;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(74, 124, 44, 0.3);
+    }
+    
+    .cta-button:hover {
+      background: #2d5016;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(74, 124, 44, 0.4);
+    }
+    
+    section {
+      padding: 80px 0;
+    }
+    
+    h2 {
+      text-align: center;
+      font-size: 42px;
+      margin-bottom: 50px;
+      color: #2d5016;
+    }
+    
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+    
+    .feature-card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+    }
+    
+    .feature-icon {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #4a7c2c;
+    }
+    
+    .feature-card h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #2d5016;
+    }
+    
+    .gallery {
+      background: #f5f5f5;
+    }
+    
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    
+    .gallery-item {
+      height: 300px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    
+    .contact {
+      background: linear-gradient(135deg, #2d5016 0%, #4a7c2c 100%);
+      color: white;
+      text-align: center;
+    }
+    
+    .contact h2 {
+      color: white;
+    }
+    
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+    
+    .contact-item {
+      font-size: 18px;
+    }
+    
+    .contact-item i {
+      display: block;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    
+    footer {
+      background: #1a2f0f;
+      color: white;
+      text-align: center;
+      padding: 30px 0;
+    }
+    
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .hero h1 {
+        font-size: 36px;
+      }
+      
+      .hero p {
+        font-size: 18px;
+      }
+      
+      h2 {
+        font-size: 32px;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="container">
-      <nav>
-        <div class="brand">Charvi Farmhouse</div>
-        <div>
-          <a class="cta" href="https://wa.me/910000000000" aria-label="Book Charvi Farmhouse on WhatsApp">Book on WhatsApp</a>
-          <a class="cta" style="background:#0ea5e9;margin-left:8px" href="https://www.instagram.com/charvi_farmhouse" aria-label="View Charvi Farmhouse on Instagram">Instagram</a>
-        </div>
-      </nav>
-    </div>
+    <nav class="container">
+      <a href="#" class="logo">🌾 Charvi Farmhouse</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main>
-    <section class="hero container">
-      <div>
-        <h1>Luxury Farmhouse with Private Pool in Bhanur, Hyderabad</h1>
-        <p>Experience a premium countryside stay at Charvi Farmhouse — a spacious, pet‑friendly retreat with a private pool, lush lawns, cozy rooms, and dedicated event spaces ideal for parties, weddings, corporate retreats, and relaxed weekend getaways.</p>
-        <div class="badges">
-          <span class="badge">Private Pool</span>
-          <span class="badge">Pet‑Friendly</span>
-          <span class="badge">Event Lawn</span>
-          <span class="badge">Secure Parking</span>
-        </div>
-        <a class="cta" href="https://wa.me/910000000000">Check Dates & Pricing</a>
-      </div>
-      <div>
-        <img src="images/hero.jpg" alt="Charvi Farmhouse luxury stay with private pool and lawn in Bhanur, Hyderabad" />
-      </div>
-    </section>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Welcome to Charvi Farmhouse</h1>
+      <p>Experience luxury in the heart of nature</p>
+      <a href="#contact" class="cta-button">Book Your Stay</a>
+    </div>
+  </section>
 
-    <section class="section container">
-      <h2>Amenities and Experiences</h2>
-      <div class="grid grid-3">
-        <div class="card">
-          <h3>Premium Stay</h3>
-          <ul>
-            <li>Airy bedrooms with comfortable bedding</li>
-            <li>Modern bathrooms and essentials</li>
-            <li>AC, Wi‑Fi, and power backup</li>
-          </ul>
+  <section id="features">
+    <div class="container">
+      <h2>Our Amazing Features</h2>
+      <div class="features">
+        <div class="feature-card">
+          <div class="feature-icon">🏡</div>
+          <h3>Spacious Accommodation</h3>
+          <p>Enjoy our beautifully designed rooms with modern amenities and rustic charm.</p>
         </div>
-        <div class="card">
-          <h3>Outdoor Leisure</h3>
-          <ul>
-            <li>Private swimming pool</li>
-            <li>Lush event‑ready lawn</li>
-            <li>Bonfire and outdoor seating</li>
-          </ul>
+        <div class="feature-card">
+          <div class="feature-icon">🌳</div>
+          <h3>Nature Trails</h3>
+          <p>Explore scenic walking paths through lush greenery and organic farms.</p>
         </div>
-        <div class="card">
-          <h3>Events & Gatherings</h3>
-          <ul>
-            <li>Birthday and family celebrations</li>
-            <li>Corporate team outings</li>
-            <li>Intimate wedding functions</li>
-          </ul>
+        <div class="feature-card">
+          <div class="feature-icon">🍽️</div>
+          <h3>Farm-to-Table Dining</h3>
+          <p>Savor fresh, organic meals prepared with ingredients from our own farm.</p>
         </div>
-      </div>
-    </section>
-
-    <section class="section container">
-      <h2>Guest Testimonials</h2>
-      <div class="grid grid-3">
-        <figure class="card">
-          <blockquote>“Perfect weekend getaway near Hyderabad! The pool and lawn were spotless and the staff were very helpful.”</blockquote>
-          <figcaption>— Ananya, Family Stay</figcaption>
-        </figure>
-        <figure class="card">
-          <blockquote>“Great venue for our office retreat. Smooth check‑in, ample parking, and amazing evening ambiance.”</blockquote>
-          <figcaption>— Karthik, Corporate Outing</figcaption>
-        </figure>
-        <figure class="card">
-          <blockquote>“Pet‑friendly and peaceful. Kids loved the pool and we enjoyed the nature vibes.”</blockquote>
-          <figcaption>— Meera, Weekend Trip</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="section container" id="faq">
-      <h2>Frequently Asked Questions</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Where is Charvi Farmhouse located?</h3>
-          <p>We are located in Bhanur, near Hyderabad, Telangana — easily accessible via ORR and major highways.</p>
+        <div class="feature-card">
+          <div class="feature-icon">🏊</div>
+          <h3>Swimming Pool</h3>
+          <p>Relax and unwind in our pristine outdoor swimming pool.</p>
         </div>
-        <div class="card">
-          <h3>What is the guest capacity?</h3>
-          <p>Ideal for nuclear families to mid‑size gatherings. For events, please share the head‑count on WhatsApp for a tailored plan.</p>
+        <div class="feature-card">
+          <div class="feature-icon">🎉</div>
+          <h3>Event Hosting</h3>
+          <p>Perfect venue for weddings, parties, and corporate retreats.</p>
         </div>
-        <div class="card">
-          <h3>Is the farmhouse pet‑friendly?</h3>
-          <p>Yes, well‑behaved pets are welcome. Do inform us in advance for arrangements.</p>
-        </div>
-        <div class="card">
-          <h3>Do you allow parties and events?</h3>
-          <p>Yes. We host birthdays, pre‑wedding shoots, small wedding functions, and corporate retreats with prior confirmation.</p>
-        </div>
-        <div class="card">
-          <h3>How to book and what are the charges?</h3>
-          <p>Tap “Book on WhatsApp” to check dates and pricing. Share your dates, group size, and any special requests for a quick quote.</p>
+        <div class="feature-card">
+          <div class="feature-icon">🐕</div>
+          <h3>Pet Friendly</h3>
+          <p>Bring your furry friends along for a memorable countryside experience.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section container">
+  <section class="gallery" id="gallery">
+    <div class="container">
       <h2>Gallery</h2>
-      <div class="grid grid-3">
-        <img class="card" src="images/pool.jpg" alt="Private swimming pool at Charvi Farmhouse in Bhanur, Hyderabad" />
-        <img class="card" src="images/lawn.jpg" alt="Green event lawn and outdoor seating at Charvi Farmhouse" />
-        <img class="card" src="images/room.jpg" alt="Cozy premium bedroom at Charvi Farmhouse with modern amenities" />
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1587061949409-02df41d5e562?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Farmhouse Exterior">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cozy Interior">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Swimming Pool">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1464146072230-91cabc968266?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nature View">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dining Area">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Garden View">
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section container" id="contact">
-      <h2>Book Your Stay</h2>
-      <p>For bookings and inquiries, contact us on WhatsApp or Instagram. We’ll share availability, pricing, and a customized plan for your stay or event.</p>
-      <p>
-        <a class="cta" href="https://wa.me/910000000000">WhatsApp Booking</a>
-        <a class="cta" style="background:#0ea5e9;margin-left:8px" href="https://www.instagram.com/charvi_farmhouse">Instagram Profile</a>
-      </p>
-    </section>
-  </main>
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <p>Ready to experience the perfect getaway? Contact us today!</p>
+      <div class="contact-info">
+        <div class="contact-item">
+          <i>📞</i>
+          <p>+91 12345 67890</p>
+        </div>
+        <div class="contact-item">
+          <i>📧</i>
+          <p>info@charvifarmhouse.com</p>
+        </div>
+        <div class="contact-item">
+          <i>📍</i>
+          <p>Charvi Farmhouse, Rural Area</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <footer class="container">
-    <p>© <span id="year"></span> Charvi Farmhouse, Bhanur, Hyderabad. All rights reserved.</p>
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Charvi Farmhouse. All rights reserved.</p>
+    </div>
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
