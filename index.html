@@ -1,358 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Charvi Farmhouse - Luxury Farm Stay Experience</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charvi Farm House - Your Perfect Getaway</title>
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Dancing+Script:wght@700&display=swap" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: 'Arial', sans-serif;
-      line-height: 1.6;
-      color: #333;
-    }
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    
-    header {
-      background: linear-gradient(135deg, #2d5016 0%, #4a7c2c 100%);
-      color: white;
-      padding: 20px 0;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .logo {
-      font-size: 28px;
-      font-weight: bold;
-      text-decoration: none;
-      color: white;
-    }
-    
-    .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 30px;
-    }
-    
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    
-    .nav-links a:hover {
-      color: #b8d99f;
-    }
-    
-    .hero {
-      background: url('https://images.unsplash.com/photo-1464093515883-ec948246accb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      position: relative;
-      margin-top: 70px;
-    }
-    
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.4);
-    }
-    
-    .hero-content {
-      position: relative;
-      z-index: 1;
-    }
-    
-    .hero h1 {
-      font-size: 56px;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    }
-    
-    .hero p {
-      font-size: 24px;
-      margin-bottom: 30px;
-    }
-    
-    .cta-button {
-      display: inline-block;
-      padding: 15px 40px;
-      background: #4a7c2c;
-      color: white;
-      text-decoration: none;
-      border-radius: 50px;
-      font-size: 18px;
-      transition: all 0.3s;
-      box-shadow: 0 4px 15px rgba(74, 124, 44, 0.3);
-    }
-    
-    .cta-button:hover {
-      background: #2d5016;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(74, 124, 44, 0.4);
-    }
-    
-    section {
-      padding: 80px 0;
-    }
-    
-    h2 {
-      text-align: center;
-      font-size: 42px;
-      margin-bottom: 50px;
-      color: #2d5016;
-    }
-    
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-    }
-    
-    .feature-card {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.3s;
-    }
-    
-    .feature-card:hover {
-      transform: translateY(-10px);
-    }
-    
-    .feature-icon {
-      font-size: 48px;
-      margin-bottom: 20px;
-      color: #4a7c2c;
-    }
-    
-    .feature-card h3 {
-      font-size: 24px;
-      margin-bottom: 15px;
-      color: #2d5016;
-    }
-    
-    .gallery {
-      background: #f5f5f5;
-    }
-    
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-    
-    .gallery-item {
-      height: 300px;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-    
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s;
-    }
-    
-    .gallery-item:hover img {
-      transform: scale(1.1);
-    }
-    
-    .contact {
-      background: linear-gradient(135deg, #2d5016 0%, #4a7c2c 100%);
-      color: white;
-      text-align: center;
-    }
-    
-    .contact h2 {
-      color: white;
-    }
-    
-    .contact-info {
-      display: flex;
-      justify-content: center;
-      gap: 50px;
-      flex-wrap: wrap;
-      margin-top: 40px;
-    }
-    
-    .contact-item {
-      font-size: 18px;
-    }
-    
-    .contact-item i {
-      display: block;
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-    
-    footer {
-      background: #1a2f0f;
-      color: white;
-      text-align: center;
-      padding: 30px 0;
-    }
-    
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-      
-      .hero h1 {
-        font-size: 36px;
-      }
-      
-      .hero p {
-        font-size: 18px;
-      }
-      
-      h2 {
-        font-size: 32px;
-      }
-    }
+    body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+    .font-dancing-script { font-family: 'Dancing Script', cursive; }
+    .hero-section { background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('images/hero.png'); background-size: cover; background-position: center; }
+    .gallery-img { transition: transform .3s ease, box-shadow .3s ease; }
+    .gallery-img:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(0,0,0,.2); }
+    .btn-animated { transition: all .3s ease-in-out; }
+    .btn-animated:hover { transform: translateY(-3px); box-shadow: 0 4px 8px rgba(0,0,0,.2); }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity .6s ease-out, transform .6s ease-out; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .bg-white\/80 { --tw-bg-opacity: .8; background-color: rgba(255,255,255,var(--tw-bg-opacity)); }
   </style>
 </head>
 <body>
-  <header>
-    <nav class="container">
-      <a href="#" class="logo">🌾 Charvi Farmhouse</a>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+  <!-- Header -->
+  <header class="bg-white/80 backdrop-blur-sm shadow-md fixed w-full z-50">
+    <nav class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center flex-wrap">
+      <a href="#" class="font-dancing-script text-2xl sm:text-3xl font-bold text-green-700">Charvi Farm House</a>
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="#about" class="text-gray-600 hover:text-green-700 transition">About</a>
+        <a href="#gallery" class="text-gray-600 hover:text-green-700 transition">Gallery</a>
+        <a href="#pricing" class="text-gray-600 hover:text-green-700 transition">Pricing</a>
+        <a href="#contact" class="text-gray-600 hover:text-green-700 transition">Contact</a>
+        <span class="text-gray-700 font-semibold"><i class="fas fa-phone-alt mr-2"></i>6300967780</span>
+        <a href="tel:+916300967780" class="btn-animated bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full flex items-center gap-2 text-sm">Call Now</a>
+      </div>
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="text-gray-600 hover:text-green-700 focus:outline-none"><i class="fas fa-bars text-2xl"></i></button>
+      </div>
     </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-white/95 w-full">
+      <a href="#about" class="block py-3 px-4 text-base hover:bg-green-100 transition-colors duration-300">About</a>
+      <a href="#gallery" class="block py-3 px-4 text-base hover:bg-green-100 transition-colors duration-300">Gallery</a>
+      <a href="#pricing" class="block py-3 px-4 text-base hover:bg-green-100 transition-colors duration-300">Pricing</a>
+      <a href="#contact" class="block py-3 px-4 text-base hover:bg-green-100 transition-colors duration-300">Contact</a>
+      <div class="p-4 border-t border-gray-200">
+        <a href="tel:+916300967780" class="btn-animated w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full flex items-center justify-center gap-3 text-lg"><i class="fas fa-phone"></i> Call Now</a>
+      </div>
+    </div>
   </header>
 
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <h1>Welcome to Charvi Farmhouse</h1>
-      <p>Experience luxury in the heart of nature</p>
-      <a href="#contact" class="cta-button">Book Your Stay</a>
+  <!-- Hero -->
+  <section class="hero-section h-screen flex items-center justify-center text-white text-center px-4">
+    <div class="bg-black/40 p-6 sm:p-8 rounded-xl">
+      <h1 class="font-dancing-script text-5xl sm:text-6xl md:text-8xl font-bold mb-4">Charvi Farm House</h1>
+      <p class="text-lg sm:text-xl md:text-2xl font-light">Your serene escape awaits. Book your stay today!</p>
     </div>
   </section>
 
-  <section id="features">
-    <div class="container">
-      <h2>Our Amazing Features</h2>
-      <div class="features">
-        <div class="feature-card">
-          <div class="feature-icon">🏡</div>
-          <h3>Spacious Accommodation</h3>
-          <p>Enjoy our beautifully designed rooms with modern amenities and rustic charm.</p>
+  <main class="container mx-auto px-4 sm:px-6 py-16">
+    <!-- About -->
+    <section id="about" class="my-16 fade-in">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-green-800">Welcome to Your Private Oasis</h2>
+      <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        <div class="md:w-1/2">
+          <img src="images/gallery-lawn.jpg" alt="Farmhouse view" class="rounded-lg shadow-xl w-full gallery-img" />
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">🌳</div>
-          <h3>Nature Trails</h3>
-          <p>Explore scenic walking paths through lush greenery and organic farms.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🍽️</div>
-          <h3>Farm-to-Table Dining</h3>
-          <p>Savor fresh, organic meals prepared with ingredients from our own farm.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🏊</div>
-          <h3>Swimming Pool</h3>
-          <p>Relax and unwind in our pristine outdoor swimming pool.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🎉</div>
-          <h3>Event Hosting</h3>
-          <p>Perfect venue for weddings, parties, and corporate retreats.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🐕</div>
-          <h3>Pet Friendly</h3>
-          <p>Bring your furry friends along for a memorable countryside experience.</p>
+        <div class="md:w-1/2">
+          <p class="text-base sm:text-lg mb-4">Nestled in the tranquil Bhanur Village, Charvi Farm House offers the perfect blend of luxury and nature. It's an ideal destination for families, friends, and small groups looking to unwind and create lasting memories.</p>
+          <p class="text-base sm:text-lg mb-6">Enjoy our sparkling clean swimming pool, lush green lawns, and comfortable, well-appointed rooms. Whether you're planning a weekend getaway, a day-long picnic, or a special celebration, our farmhouse provides the perfect backdrop.</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-base sm:text-lg">
+            <div class="flex items-center gap-3"><i class="fas fa-users text-green-600 w-5 text-center"></i>Up to 15 Guests</div>
+            <div class="flex items-center gap-3"><i class="fas fa-swimming-pool text-green-600 w-5 text-center"></i>Private Pool</div>
+            <div class="flex items-center gap-3"><i class="fas fa-tree text-green-600 w-5 text-center"></i>Spacious Lawns</div>
+            <div class="flex items-center gap-3"><i class="fas fa-bed text-green-600 w-5 text-center"></i>Cozy Bedrooms</div>
+            <div class="flex items-center gap-3"><i class="fas fa-kitchen-set text-green-600 w-5 text-center"></i>Full Kitchen</div>
+            <div class="flex items-center gap-3"><i class="fas fa-music text-green-600 w-5 text-center"></i>Music System</div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="gallery" id="gallery">
-    <div class="container">
-      <h2>Gallery</h2>
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1587061949409-02df41d5e562?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Farmhouse Exterior">
+    <!-- Gallery -->
+    <section id="gallery" class="my-24 fade-in">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-green-800">Explore the Farmhouse</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <img src="images/gallery-pool-night.jpg" alt="Pool at night" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover" onclick="openModal('images/gallery-pool-night.jpg')" />
+        <img src="images/gallery-lawn.jpg" alt="Lawn Area" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover" onclick="openModal('images/gallery-lawn.jpg')" />
+        <img src="images/gallery-relaxing-zone.jpg" alt="Guests enjoying their time" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover" onclick="openModal('images/gallery-relaxing-zone.jpg')" />
+        <img src="images/gallery-bedroom.jpg" alt="Bedroom" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover" onclick="openModal('images/gallery-bedroom.jpg')" />
+        <img src="images/gallery-living-area.jpg" alt="Living room" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover" onclick="openModal('images/gallery-living-area.jpg')" />
+        <img src="images/gallery-night-view.jpg" alt="Farmhouse at night" class="gallery-img rounded-lg cursor-pointer w-full h-full object-cover" onclick="openModal('images/gallery-night-view.jpg')" />
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="my-24 fade-in">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-green-800">Pricing &amp; Booking</h2>
+      <div class="flex flex-col md:flex-row gap-8 justify-center">
+        <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-green-500 w-full md:w-1/3 text-center">
+          <h3 class="text-2xl font-bold mb-4">Weekdays</h3>
+          <p class="text-4xl sm:text-5xl font-bold mb-4 text-green-700">₹14,000</p>
+          <p class="text-gray-500">(Mon–Fri, 22 Hours)</p>
         </div>
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cozy Interior">
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Swimming Pool">
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1464146072230-91cabc968266?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nature View">
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dining Area">
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Garden View">
+        <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-green-700 w-full md:w-1/3 text-center">
+          <h3 class="text-2xl font-bold mb-4">Weekends</h3>
+          <p class="text-4xl sm:text-5xl font-bold mb-4 text-green-700">₹16,000</p>
+          <p class="text-gray-500">(Sat–Sun, 22 Hours)</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="container">
-      <h2>Get in Touch</h2>
-      <p>Ready to experience the perfect getaway? Contact us today!</p>
-      <div class="contact-info">
-        <div class="contact-item">
-          <i>📞</i>
-          <p>+91 12345 67890</p>
-        </div>
-        <div class="contact-item">
-          <i>📧</i>
-          <p>info@charvifarmhouse.com</p>
-        </div>
-        <div class="contact-item">
-          <i>📍</i>
-          <p>Charvi Farmhouse, Rural Area</p>
-        </div>
+      <div class="mt-12 bg-green-50 p-6 sm:p-8 rounded-lg shadow-inner">
+        <h3 class="text-xl sm:text-2xl font-bold mb-6 text-center text-green-800">Important Information</h3>
+        <ul class="space-y-4 text-base sm:text-lg list-none md:list-disc list-inside md:grid md:grid-cols-2 md:gap-x-8">
+          <li><i class="fas fa-users text-green-600 mr-2 md:hidden"></i>Capacity: 15 members included.</li>
+          <li><i class="fas fa-user-plus text-green-600 mr-2 md:hidden"></i>Extra Guests: ₹500 per additional person.</li>
+          <li><i class="fas fa-clock text-green-600 mr-2 md:hidden"></i>Check-in: 12:00 PM</li>
+          <li><i class="fas fa-clock text-green-600 mr-2 md:hidden"></i>Check-out: 10:00 AM (next day)</li>
+          <li><i class="fas fa-file-invoice-dollar text-green-600 mr-2 md:hidden"></i>Advance payment required to confirm booking.</li>
+          <li><i class="fas fa-music text-green-600 mr-2 md:hidden"></i>Music allowed till midnight.</li>
+          <li><i class="fas fa-id-card text-green-600 mr-2 md:hidden"></i>ID proof mandatory at check-in.</li>
+          <li><i class="fas fa-broom text-green-600 mr-2 md:hidden"></i>Please maintain cleanliness &amp; check out on time.</li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 Charvi Farmhouse. All rights reserved.</p>
-    </div>
+    <!-- Contact -->
+    <section id="contact" class="my-24 text-center fade-in">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-green-800">Ready to Book?</h2>
+      <p class="text-lg sm:text-xl mb-10 max-w-2xl mx-auto">Contact us now to reserve your date and experience the tranquility of Charvi Farm House.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a target="_blank" href="https://maps.app.goo.gl/DhFEEfKiLsqnojtBA" class="btn-animated bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-5 rounded-full flex items-center gap-3 text-base sm:text-lg"><i class="fas fa-map-marker-alt"></i> Google Maps</a>
+        <a target="_blank" href="https://www.instagram.com/charvifarmhouse/" class="btn-animated bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-3 px-5 rounded-full flex items-center gap-3 text-base sm:text-lg"><i class="fab fa-instagram"></i> Instagram</a>
+        <a target="_blank" href="https://wa.me/916300967780" class="btn-animated bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-5 rounded-full flex items-center gap-3 text-base sm:text-lg"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="tel:+916300967780" class="btn-animated bg-gray-700 hover:bg-gray-800 text-white font-bold py-3 px-5 rounded-full flex items-center gap-3 text-base sm:text-lg"><i class="fas fa-phone"></i> Call Now</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center p-6">
+    © 2024 Charvi Farm House. All Rights Reserved.
+    <p class="text-sm text-gray-400 mt-2">Designed with <i class="fas fa-heart text-red-500"></i></p>
   </footer>
-</body>
-</html>
+
+  <!-- Image Modal -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-90 flex justify-center items-center z-[100] hidden p-4" onclick="closeModal()">
+    <img id="modalImage" alt="Enlarged gallery image" class="max-w-full max-h-full object-contain rounded-lg" />
+    <button class="absolute top-4 right-4 text-white text-4xl font-bold">×</button>
+  </div>
+
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.add('w-full');
+    });
+
+    // Close mobile menu when link clicked
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); });
+    });
+
+    // Image Modal Logic
+    const imageModal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    function openModal(src) { modalImage.src = src; imageModal.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeModal() { imageModal.classList.add('hidden'); document.body.style.overflow = 'auto'; }
+
+    // Escape to close
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+    // Fade-in on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+    const appearOnScroll = new IntersectionObserver((entries, observer) =>
