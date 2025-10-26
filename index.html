@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Charvi Farm House — Your Private Oasis</title>
@@ -34,160 +35,207 @@
     /* HEADER */
     header.site-header{
       position:sticky;top:0;z-index:100;
-      background:white;
-      box-shadow:var(--shadow);
+      background:var(--bg);
+      border-bottom:1px solid #e2e8f0;
+      padding:14px 0;
+      box-shadow:0 2px 6px rgba(0,0,0,0.03);
     }
-    .nav-inner{
-      display:flex;align-items:center;justify-content:space-between;
-      padding:10px 20px;
-    }
-    .brand-text h1{
+    header .wrap{display:flex;align-items:center;justify-content:space-between}
+    header .logo{
       font-family:var(--font-script);
-      font-size:1.5rem;
-      color:#064e3b;
+      font-size:28px;
+      font-weight:700;
+      color:var(--accent);
+      letter-spacing:1px;
     }
-    .brand-text p{
-      font-size:0.8rem;
-      color:var(--muted);
+    header nav{display:flex;gap:26px}
+    header nav a{
+      font-size:15px;
+      font-weight:500;
+      color:#334155;
+      transition:color 0.2s;
     }
-    .phone-pill{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:8px 14px;
-      border-radius:999px;
-      background:var(--accent);
-      color:white;
-      font-weight:600;
-    }
-    .hamburger{background:transparent;border:none;font-size:1.5rem}
-    nav.desktop-nav{display:none;gap:16px}
+    header nav a:hover{color:var(--accent)}
     /* HERO */
-    .hero{
-      position:relative;
-      background:url('images/hero.png') center/cover no-repeat;
-      border-radius:0 0 18px 18px;
+    section.hero{
+      background:#fff;
+      border-radius:var(--radius);
       overflow:hidden;
+      box-shadow:var(--shadow);
+      margin:30px 0;
     }
-    .hero-overlay{
-      background:rgba(0,0,0,0.4);
-      padding:60px 20px;
-      text-align:center;
-      color:white;
+    .hero-img{
+      height:380px;
+      background-size:cover;
+      background-position:center;
+      position:relative;
     }
-    .hero h2{
-      font-family:var(--font-script);
-      font-size:2.5rem;
-      margin-bottom:10px;
+    .hero-badge{
+      position:absolute;
+      top:18px;left:18px;
+      background:rgba(255,255,255,0.92);
+      backdrop-filter:blur(8px);
+      padding:8px 16px;
+      border-radius:24px;
+      font-weight:600;
+      color:var(--accent);
+      font-size:14px;
     }
-    .hero p{max-width:600px;margin:0 auto 20px}
+    .hero-content{
+      padding:32px;
+    }
+    .hero-content h1{
+      font-size:36px;
+      line-height:1.2;
+      margin-bottom:14px;
+      color:#0f172a;
+    }
+    .hero-content p{
+      font-size:17px;
+      color:var(--muted);
+      margin-bottom:24px;
+    }
     .btn{
       display:inline-block;
-      padding:12px 20px;
+      padding:12px 26px;
       border-radius:8px;
       font-weight:600;
+      font-size:15px;
+      transition:transform 0.2s, box-shadow 0.2s;
+    }
+    .btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,0.1)}
+    .btn-primary{
+      background:var(--accent);
+      color:#fff;
+    }
+    .btn-whatsapp{
+      background:#25D366;
+      color:#fff;
+    }
+    .btn-map{
+      background:var(--accent-2);
+      color:#fff;
+    }
+    .cta-line{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0}
+    /* CARD */
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:32px;
+      margin:20px 0;
+      box-shadow:var(--shadow);
+    }
+    .section-title{
+      font-size:28px;
+      margin-bottom:18px;
+      color:#0f172a;
+    }
+    .features{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:16px;
+      margin:20px 0;
+    }
+    .feature{
+      padding:18px;
+      border-radius:10px;
+      background:#f1f5f9;
+      font-weight:500;
+      font-size:15px;
       text-align:center;
     }
-    .btn-primary{background:var(--accent);color:white}
-    .btn-secondary{background:rgba(255,255,255,0.3);color:white}
-    /* ABOUT */
-    .card{background:var(--card);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);margin-bottom:20px}
-    .section-title{font-size:1.6rem;margin-bottom:12px;color:#064e3b}
-    .about-grid{display:grid;gap:20px}
-    .features{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:10px}
-    .feature{background:#f0fdf4;padding:8px;border-radius:8px;font-weight:600;color:#065f46}
     /* GALLERY */
-    .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-    .gallery-grid img{border-radius:8px;cursor:pointer;object-fit:cover;height:150px}
-    /* CONTACT */
-    .cta-line{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
-    .cta-line a{flex:1;min-width:140px;text-align:center}
-    .btn-whatsapp{background:#25d366;color:white}
-    .btn-map{background:#0ea5e9;color:white}
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+      gap:16px;
+    }
+    .gallery-grid img{
+      border-radius:10px;
+      width:100%;
+      height:200px;
+      object-fit:cover;
+      transition:transform 0.3s;
+    }
+    .gallery-grid img:hover{
+      transform:scale(1.04);
+    }
     /* FOOTER */
-    footer{text-align:center;padding:20px;color:var(--muted);font-size:0.9rem}
-    @media(min-width:768px){
-      nav.desktop-nav{display:flex}
-      .hamburger{display:none}
-      .about-grid{grid-template-columns:1fr 1fr}
-      .gallery-grid{grid-template-columns:repeat(3,1fr)}
+    footer{
+      text-align:center;
+      padding:30px 20px;
+      color:var(--muted);
+      font-size:14px;
     }
   </style>
+</head>
 <body>
   <header class="site-header">
-  <div class="nav-inner">
-    <div class="brand-text">
-      <h1>Charvi Farm House</h1>
-      <p>Private pool • Spacious lawns • Cozy stays</p>
+    <div class="wrap">
+      <div class="logo">Charvi</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Book Now</a>
+      </nav>
     </div>
-    <div style="display:flex;align-items:center;gap:10px">
-      <a class="phone-pill" href="tel:+916300967780">📞 6300967780</a>
-      <button class="hamburger">☰</button>
-    </div>
-  </div>
   </header>
-
-<section class="hero">
-  <div class="hero-overlay">
-    <h2>Charvi Farm House</h2>
-    <p>Your serene escape — private pool, lush lawns and cozy rooms. Book your perfect weekend or celebration.</p>
-    <a class="btn btn-primary" href="tel:+916300967780">📞 Call to Book</a>
-    <a class="btn btn-secondary" href="#gallery">View Gallery</a>
-  </div>
-</section>
-
-<main class="wrap">
-  <section class="card" id="about">
-    <h3 class="section-title">Welcome to Your Private Oasis</h3>
-    <div class="about-grid">
-      <img src="images/front-view.jpg" alt="Front view of Charvi Farm House"/>
-      <div>
-        <p>Nestled in the tranquil Bhanur Village, Charvi Farm House offers a perfect blend of modern comfort and natural beauty.</p>
-        <div class="features">
-          <div class="feature">🏊‍♀️ Private Pool</div>
-          <div class="feature">🌳 Spacious Lawns</div>
-          <div class="feature">🛏️ Cozy Bedrooms</div>
-          <div class="feature">🍽️ Full Kitchen</div>
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-img" style="background-image:url('images/hero.png')">
+        <div class="hero-badge">✨ Premium Farmhouse</div>
+      </div>
+      <div class="hero-content">
+        <h1>Your Private Oasis Awaits</h1>
+        <p>Escape to Charvi Farm House — a luxurious retreat near Bhanur Village, featuring a private pool, lush lawns, cozy bedrooms, and all the comforts of home.</p>
+        <div class="cta-line">
+          <a class="btn btn-primary" href="tel:+916300967780">📞 Call Now</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/916300967780">💬 WhatsApp</a>
+          <a class="btn btn-map" href="https://maps.app.goo.gl/DhFEEfKiLsqnojtBA">📍 Directions</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="card" id="gallery">
-    <h3 class="section-title">Gallery</h3>
-    <div class="gallery-grid">
-      <img src="images/gallery-1.jpg" alt="Gallery 1"/>
-      <img src="images/gallery-2.jpg" alt="Gallery 2"/>
-      <img src="images/gallery-3.jpg" alt="Gallery 3"/>
-      <img src="images/gallery-4.jpg" alt="Gallery 4"/>
-      <img src="images/gallery-5.jpg" alt="Gallery 5"/>
-      <img src="images/gallery-6.jpg" alt="Gallery 6"/>
-      <img src="images/gallery-7.jpg" alt="Gallery 7"/>
-      <img src="images/gallery-8.jpg" alt="Gallery 8"/>
-      <img src="images/gallery-9.jpg" alt="Gallery 9"/>
-    </div>
-  </section>
-
-  <section class="card" id="contact">
-    <h3 class="section-title">Ready to Book?</h3>
-    <p>Reserve your dates now — we offer flexible check-in, curated packages and group options.</p>
-    <div class="cta-line" style="margin-top:10px">
-      <a class="btn btn-primary" href="tel:+916300967780">📞 Call: 6300967780</a>
-      <a class="btn btn-whatsapp" href="https://wa.me/916300967780">💬 WhatsApp</a>
-      <a class="btn btn-map" href="https://maps.app.goo.gl/DhFEEfKiLsqnojtBA">📍 Directions</a>
-    </div>
-    <p style="margin-top:10px">Or DM us on Instagram: 
-      <a href="https://www.instagram.com/charvifarmhouse/" style="color:var(--accent-2);font-weight:600">@charvifarmhouse</a>
-    </p>
-  </section>
-</main>
-
-<footer>
-  Charvi Farm House © <span id="year"></span><br/>
-  Designed with care • Privacy-first • Local hospitality
-</footer>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
+    </section>
+    <section class="card" id="about">
+      <h3 class="section-title">About Charvi</h3>
+      <p>Charvi Farm House is your home away from home — perfect for family gatherings, friend reunions, or a peaceful weekend escape. We blend modern amenities with rustic charm.</p>
+      <div class="features">
+        <div class="feature">🏊‍♀️ Private Pool</div>
+        <div class="feature">🌳 Spacious Lawns</div>
+        <div class="feature">🛏️ Cozy Bedrooms</div>
+        <div class="feature">🍽️ Full Kitchen</div>
+      </div>
+    </section>
+    <section class="card" id="gallery">
+      <h3 class="section-title">Gallery</h3>
+      <div class="gallery-grid">
+        <img src="images/img1.jpg" alt="Gallery 1"/>
+        <img src="images/img2.jpg" alt="Gallery 2"/>
+        <img src="images/img3.jpg" alt="Gallery 3"/>
+        <img src="images/img4.jpg" alt="Gallery 4"/>
+        <img src="images/img5.jpg" alt="Gallery 5"/>
+        <img src="images/img6.jpg" alt="Gallery 6"/>
+        <img src="images/img7.jpg" alt="Gallery 7"/>
+        <img src="images/img8.jpg" alt="Gallery 8"/>
+        <img src="images/img9.jpg" alt="Gallery 9"/>
+      </div>
+    </section>
+    <section class="card" id="contact">
+      <h3 class="section-title">Ready to Book?</h3>
+      <p>Reserve your dates now — we offer flexible check-in, curated packages and group options.</p>
+      <div class="cta-line" style="margin-top:10px">
+        <a class="btn btn-primary" href="tel:+916300967780">📞 Call: 6300967780</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/916300967780">💬 WhatsApp</a>
+        <a class="btn btn-map" href="https://maps.app.goo.gl/DhFEEfKiLsqnojtBA">📍 Directions</a>
+      </div>
+      <p style="margin-top:10px">Or DM us on Instagram: <a href="https://www.instagram.com/charvifarmhouse/" style="color:var(--accent-2);font-weight:600">@charvifarmhouse</a></p>
+    </section>
+  </main>
+  <footer>
+    Charvi Farm House © <span id="year"></span>
+    Designed with care • Privacy-first • Local hospitality
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
